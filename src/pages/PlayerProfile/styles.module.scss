@@ -1,0 +1,88 @@
+// Importing variables
+@import "../../assets/styles/variables.scss";
+
+// Styling for the container
+.container {
+  width: 100%;
+  height: 100%;
+  color: $basicWhite;
+
+  // Styling for "See More" button wrapper
+  .see_more_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+}
+
+// Styling for character information section
+.character_information {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  // Styling for individual information categories
+  > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+
+    // Styling for each information item
+    > div {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      border: 2px solid $basicWhite;
+      border-radius: 30px;
+      row-gap: 2px;
+    }
+  }
+}
+
+// Styling for character inventory section
+.character_inventory {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  // Styling for inventory items wrapper
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 50px 35px;
+  }
+}
+
+// Styling for information values
+.info_value {
+  font-size: 20px;
+
+  // Styling for label (first child)
+  > :nth-child(1) {
+    font-weight: 600;
+  }
+}
+
+// Media query for medium screens
+@media (max-width: $medium-screen) {
+  .character_information {
+    // Adjusting layout for smaller screens
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+// Media query for small screens
+@media (max-width: $small-screen) {
+  .character_inventory {
+    > div {
+      justify-content: center;
+    }
+  }
+}

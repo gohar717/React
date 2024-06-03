@@ -1,0 +1,57 @@
+// Importing SCSS files for variables and global styles
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/global.scss";
+
+// Styling for the main container
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  // Styling for the inner div
+  > div {
+    color: $basicWhite;
+    background: $basicDarkBlue;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    width: 340px;
+    row-gap: 20px;
+
+    // Styling for the input block
+    > .input_block {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      row-gap: 15px;
+    }
+
+    // Styling for error messages
+    > .error {
+      font-size: 14px;
+      color: $error;
+      text-align: center;
+    }
+
+    // Styling for nested paragraphs with links
+    > p {
+      > a {
+        color: $basicOrange;
+        @extend .orangeUnderlineHover;
+      }
+    }
+  }
+}
+
+// Media query for smaller screens
+@media (max-width: $mobile-screen) {
+  .container {
+    > div {
+      width: 100%;
+    }
+  }
+}

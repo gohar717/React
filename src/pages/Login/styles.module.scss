@@ -1,0 +1,59 @@
+// Import variable and global styles
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/global.scss";
+
+// Styles for the main container
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  // Styles for the inner div within the container
+  > div {
+    color: $basicWhite;
+    background: $basicDarkBlue;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    width: 340px;
+    row-gap: 20px;
+
+    // Styles for input block within the inner div
+    > .input_block {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      row-gap: 15px;
+    }
+
+    // Styles for error messages within the inner div
+    > .error {
+      font-size: 14px;
+      color: $error;
+      text-align: center;
+    }
+
+    // Styles for paragraphs within the inner div
+    > p {
+      // Styles for links within paragraphs with hover effect
+      > a {
+        color: $basicOrange;
+        @extend .orangeUnderlineHover;
+      }
+    }
+  }
+}
+
+// Media query for screens with a maximum width of $mobile-screen
+@media (max-width: $mobile-screen) {
+  .container {
+    > div {
+      width: 100%;
+    }
+  }
+}

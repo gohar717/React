@@ -1,0 +1,25 @@
+// Importing variable and global styles
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/global.scss";
+
+// Styling for the container
+.container {
+  color: $basicWhite;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  // Styling for the child div within the container
+  > div {
+    width: 80vw;
+    background: $basicDarkBlue;
+    padding: 20px;
+    border-radius: 30px;
+
+    // Styling for links within the child div
+    > a {
+      color: $basicOrange;
+      @extend .orangeUnderlineHover; // Extending a class for hover effect
+    }
+  }
+}

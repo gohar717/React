@@ -1,0 +1,34 @@
+// Import variables
+@import "../../assets/styles/variables.scss";
+
+// Styles for the container class
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+
+  // Styles for direct child input elements
+  > input {
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 7px;
+  }
+
+  // Styles for direct child p elements
+  > p {
+    text-align: center;
+    color: $error; // Text color using a variable
+    font-size: 14px;
+  }
+}
+
+// Styles for the label_error class
+.label_error {
+  color: $error; // Text color using a variable
+}
+
+// Styles for the input_error class
+.input_error {
+  border-color: $error; // Border color using a variable
+}

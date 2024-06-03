@@ -1,0 +1,23 @@
+// Importing variables for styling
+@import "../../assets/styles/variables.scss";
+
+// Styling for the container class
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: fit-content;
+  background-color: $basicDarkBlue; // Setting background color using the $basicDarkBlue variable
+  opacity: 0.8;
+  border-radius: 16px;
+  color: $basicWhite; // Setting text color using the $basicWhite variable
+  overflow: auto;
+  padding: 16px;
+  font-size: 24px;
+
+  // Media query for small screens
+  @media (max-width: $small-screen) {
+    font-size: 20px; // Adjusting font size for smaller screens
+  }
+}

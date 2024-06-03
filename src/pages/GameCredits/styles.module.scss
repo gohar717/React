@@ -1,0 +1,38 @@
+@import "../../assets/styles/variables.scss"; // Importing variable styles
+
+/* Styling for the GameCredits component container */
+.container {
+  width: fit-content; // Set container width to fit its content
+  color: $basicWhite; // Set text color to basic white
+  font-size: 24px; // Set font size to 24 pixels
+  display: flex; // Use flex display
+  flex-direction: column; // Set flex direction to column
+  gap: 40px; // Set gap between child elements
+
+  > div {
+    display: flex; // Use flex display for nested div
+    flex-wrap: wrap; // Wrap child elements when they exceed the container width
+    column-gap: 70px; // Set gap between columns
+
+    > div {
+      display: flex; // Use flex display for nested div
+      flex-direction: column; // Set flex direction to column
+      width: 200px; // Set width of each column
+      > :nth-child(1) {
+        font-weight: 700; // Set font weight to 700 for the first child
+        color: $basicWhite; // Set text color to basic white
+      }
+
+      > span {
+        color: $basicOrange; // Set text color to basic orange for spans
+      }
+    }
+  }
+}
+
+/* Media query for small screens */
+@media (max-width: $small-screen) {
+  .container {
+    font-size: 20px; // Reduce font size to 20 pixels for small screens
+  }
+}

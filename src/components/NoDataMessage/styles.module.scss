@@ -1,0 +1,15 @@
+// Importing variables from the styles module
+@import "../../assets/styles/variables.scss";
+
+// Styling for a container element
+.container {
+  width: 100%;
+  background: $basicDarkBlue; // Using the $basicDarkBlue variable for the background color
+  height: 250px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  opacity: 0.8;
+}

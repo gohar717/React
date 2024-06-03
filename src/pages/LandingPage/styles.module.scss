@@ -1,0 +1,383 @@
+@import "../../assets/styles/variables.scss";
+
+/* Styles for the homePage section */
+.homePage {
+  /* Styles for the border section within homePage */
+  &_border {
+    position: absolute;
+    transform: translate(5%, 2%);
+    border: 0.125rem solid #f7574e;
+    border-radius: 6.563rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+    width: 90vw;
+    height: 100%;
+    z-index: 2;
+  }
+
+  /* Styles for the arrowDown section within homePage */
+  &_arrowDown {
+    position: absolute;
+    cursor: pointer;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background: none;
+    z-index: 3;
+    display: none;
+  }
+
+  /* Styles for the firstSection section within homePage */
+  &_firstSection {
+    background-image: url("../../assets//images/homepage/firstsectionbg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem;
+
+    /* Styles for the charactersImage section within firstSection */
+    &_charactersImage {
+      z-index: 3;
+    }
+
+    /* Styles for the infoDiv section within firstSection */
+    &_infoDiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 3;
+
+      /* Styles for the logoAW section within infoDiv */
+      &_logoAW {
+        width: 10vw;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Styles for the logoTQ section within infoDiv */
+      &_logoTQ {
+        width: 30vw;
+      }
+
+      /* Styles for headings within infoDiv */
+      > h1 {
+        color: #f7574e;
+        text-align: center;
+        font-size: 3.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      > h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 1.372rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+      > p {
+        color: #fff;
+        text-align: center;
+        font-size: 1.097rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      /* Styles for buttonsDiv section within infoDiv */
+      &_buttonsDiv {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+        margin-top: 3.5rem;
+
+        /* Styles for buttons within buttonsDiv */
+        > button {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  /* Styles for the secondSection section within homePage */
+  &_secondSection {
+    background-image: url("../../assets/images/homepage/secondsectionbg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem;
+    gap: 1rem;
+
+    /* Styles for headings and images within secondSection */
+    > h1 {
+      color: #fff;
+      text-align: center;
+      font-size: 3.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    > h2 {
+      color: #fff;
+      text-align: center;
+      font-size: 1.941rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 3rem;
+    }
+  }
+
+  /* Styles for the thirdSection section within homePage */
+  &_thirdSection {
+    background-image: url("../../assets/images/homepage/thirdsectionbg.png");
+    background-attachment: fixed;
+    background-repeat: round;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7rem;
+    gap: 1rem;
+
+    /* Styles for headings and videoDiv within thirdSection */
+    > h1 {
+      color: #fff;
+      text-align: center;
+      font-size: 3.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &_videoDiv {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+
+      /* Styles for video and button within videoDiv */
+      > video {
+        width: 60%;
+      }
+      > button {
+        cursor: pointer;
+        position: absolute;
+        border: none;
+        background: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  /* Styles for the fourthSection section within homePage */
+  &_fourthSection {
+    background-image: url("../../assets/images/homepage/fourthsectionbg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.75rem 3.75rem 0 3.75rem;
+    gap: 1rem;
+
+    /* Styles for headings, images, and imagesDiv within fourthSection */
+    > h1 {
+      color: #fff;
+      text-align: center;
+      font-size: 3.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    > h2 {
+      color: #fff;
+      text-align: center;
+      font-size: 1.941rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      width: 60%;
+    }
+    &_imagesDiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      /* Styles for child elements of imagesDiv */
+      :nth-child(1) {
+        width: 100%;
+      }
+      :nth-child(2) {
+        transform: translate(0px, -60%);
+        width: 80%;
+      }
+    }
+  }
+}
+
+/* Styles for the line class */
+.line {
+  border-right: 0.063rem solid white;
+}
+
+/* Styles for the button class */
+.button {
+  border-radius: 1.325rem;
+  background: #f7574e;
+  padding: 0.5rem 3rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+  z-index: 3;
+  text-decoration: none;
+}
+
+/* Media query for large screens */
+@media (max-width: $large-screen) {
+  .homePage {
+    /* Adjustments for border section within homePage */
+    &_border {
+      transform: translate(5%, 3%);
+    }
+
+    /* Adjustments for firstSection section within homePage */
+    &_firstSection {
+      /* Adjustments for charactersImage and infoDiv within firstSection */
+      &_charactersImage {
+        width: 40vw;
+      }
+      &_infoDiv {
+        width: 40vw;
+
+        /* Adjustments for headings within infoDiv */
+        > h1 {
+          font-size: 5vw;
+        }
+        > h2 {
+          font-size: 1em;
+        }
+        > p {
+          font-size: 0.8em;
+        }
+      }
+    }
+
+    /* Adjustments for secondSection section within homePage */
+    &_secondSection {
+      /* Adjustments for headings and images within secondSection */
+      > h1 {
+        font-size: 5vw;
+      }
+      > img {
+        width: 40vw;
+      }
+      > h2 {
+        font-size: 4vw;
+      }
+    }
+
+    /* Adjustments for thirdSection section within homePage */
+    &_thirdSection {
+      /* Adjustments for headings within thirdSection */
+      > h1 {
+        font-size: 5vw;
+      }
+
+      /* Adjustments for videoDiv within thirdSection */
+      &_videoDiv {
+        /* Adjustments for button and img within videoDiv */
+        > button {
+          > img {
+            width: 50%;
+          }
+        }
+      }
+    }
+
+    /* Adjustments for fourthSection section within homePage */
+    &_fourthSection {
+      padding: 2.5rem;
+
+      /* Adjustments for headings, images, and imagesDiv within fourthSection */
+      > h1 {
+        font-size: 5vw;
+      }
+      > img {
+        width: 40vw;
+      }
+      > h2 {
+        font-size: 4vw;
+      }
+      &_imagesDiv {
+        width: 80%;
+      }
+    }
+  }
+
+  /* Adjustments for the button class */
+  .button {
+    padding: 0.3rem 1.5rem;
+    font-size: 0.8em;
+  }
+}
+
+/* Media query for small screens */
+@media (max-width: $small-screen) {
+  .homePage {
+    /* Adjustments for border section within homePage */
+    &_border {
+      transform: translate(5%, 4%);
+    }
+    &_thirdSection {
+      &_videoDiv {
+        > video {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /* Adjustments for the button class */
+  .button {
+    padding: 0.3rem 1rem;
+    font-size: 0.5em;
+  }
+}
+
+/* Media query for mobile screens */
+@media (max-width: $mobile-screen) {
+  .homePage {
+    /* Adjustments for border section within homePage */
+    &_border {
+      border-radius: 3rem;
+    }
+
+    /* Adjustments for firstSection section within homePage */
+    &_firstSection {
+      flex-direction: column;
+
+      /* Adjustments for infoDiv within firstSection */
+      &_infoDiv {
+        width: auto;
+      }
+    }
+  }
+}

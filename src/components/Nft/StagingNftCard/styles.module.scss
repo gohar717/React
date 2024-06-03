@@ -1,0 +1,35 @@
+/* Styles for the container of an NFT block */
+.nft_block {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  font-size: 20px;
+  width: 270px;
+  border-radius: 20px;
+  border: 2px solid;
+
+  /* Styling for the image within the NFT block */
+  > img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
+
+  /* Styling for the information values within the NFT block */
+  .info_value {
+    font-size: 19px;
+
+    /* Styling for the first child within the info_value class */
+    > :nth-child(1) {
+      font-weight: 600;
+    }
+  }
+
+  /* Styling for the buttons within the NFT block */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}

@@ -1,0 +1,40 @@
+// Importing variables from the styles
+@import "../../../assets/styles/variables.scss";
+
+// Styling for the InventoryCard component
+.inventory_block {
+  // Displaying as a flex container with a column direction
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 20px;
+  width: 270px;
+  border-radius: 20px;
+  border: 2px solid;
+
+  // Adding a gap between child elements
+  gap: 5px;
+
+  > img {
+    // Styling for the image inside the inventory block
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
+
+  .info_value {
+    // Styling for the information section
+    font-size: 19px;
+
+    > :nth-child(1) {
+      // Styling for the first child of .info_value (possibly the label)
+      font-weight: 600;
+    }
+  }
+
+  .buttonWrapper {
+    // Styling for the button wrapper
+    display: flex;
+    flex-direction: column;
+  }
+}

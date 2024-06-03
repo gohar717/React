@@ -1,0 +1,27 @@
+/* Importing variables.scss for consistent styling and color values. */
+@import "../../assets/styles/variables.scss";
+
+/* Styling for the changelog container. */
+.changelog {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: fit-content;
+  background-color: $basicDarkBlue; // Setting background color using a variable.
+  opacity: 0.8;
+  border-radius: 16px;
+  color: $basicWhite; // Setting text color using a variable.
+  overflow: auto;
+  padding: 16px;
+  font-size: 24px;
+
+  /* Responsive design adjustments for smaller screens. */
+  @media (max-width: $small-screen) {
+    > ul {
+      > li {
+        font-size: 20px; // Reducing font size for list items on smaller screens.
+      }
+    }
+  }
+}

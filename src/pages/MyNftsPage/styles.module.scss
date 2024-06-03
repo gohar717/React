@@ -1,0 +1,52 @@
+// Importing variable styles
+@import "../../assets/styles/variables.scss";
+
+// Styling for the main container
+.container {
+  width: 100%;
+  height: 100%;
+  color: $basicWhite;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  > p {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  // Styling for the "See More" button wrapper
+  .see_more_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+}
+
+// Styling for the block containing NFTs
+.nfts_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px 35px;
+  padding: 20px;
+}
+
+// Styling for the loader component
+.loader {
+  padding: 70px 0;
+}
+
+// Responsive styling for small screens
+@media (max-width: $small-screen) {
+  .container {
+    > p {
+      font-size: 20px;
+    }
+  }
+
+  .nfts_block {
+    row-gap: 35px;
+  }
+}

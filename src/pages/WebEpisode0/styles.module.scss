@@ -1,0 +1,32 @@
+// Importing shared variables and global styles
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/global.scss";
+
+// Styling for the container
+.container {
+  color: $basicWhite; // Text color
+  display: flex;
+  flex-direction: column;
+  gap: 20px; // Spacing between child elements
+
+  // Styling for the nested div within the container
+  > div {
+    width: 80vw; // 80% of the viewport width
+    background: $basicDarkBlue; // Background color
+    padding: 20px; // Padding around the content
+    border-radius: 30px; // Border radius for rounded corners
+    display: flex;
+    flex-direction: column;
+
+    // Styling for the iframe within the nested div
+    > iframe {
+      width: 100%; // Take up 100% of the width
+    }
+
+    // Styling for the link within the nested div
+    > a {
+      color: $basicOrange; // Link color
+      @extend .orangeUnderlineHover; // Extending styles for hover effect
+    }
+  }
+}

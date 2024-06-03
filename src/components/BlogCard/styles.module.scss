@@ -1,0 +1,35 @@
+// Import variables and global styles
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/global.scss";
+
+// Styles for the .blog class
+.blog {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: $basicDarkBlue; // Use the basicDarkBlue variable for the background color
+  padding: 20px;
+  border-radius: 30px;
+
+  > h3 {
+    cursor: pointer;
+    width: fit-content;
+    @extend .whiteUnderlineHover; // Extend styles from the .whiteUnderlineHover class
+  }
+
+  > img {
+    width: 300px;
+  }
+
+  p,
+  div {
+    font-size: 18px;
+    padding: 15px 0;
+  }
+}
+
+// Styles for the .btnWrapper class
+.btnWrapper {
+  display: flex;
+  gap: 10px;
+}

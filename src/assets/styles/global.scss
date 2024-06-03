@@ -1,0 +1,86 @@
+// Import variables from the styles directory
+@import "../styles/variables.scss";
+
+// Common styles for links with white underline on hover
+.whiteUnderlineHover {
+  text-decoration: none;
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+
+  // Styles for the underline
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.1px;
+    width: 0;
+    height: 1px;
+    // Use the $basicWhite variable from the imported variables
+    background-color: $basicWhite;
+    transition:
+      width 0.2s ease-in-out,
+      left 0.2s ease-in-out;
+  }
+
+  // Styles for the underline on hover
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+// Common styles for links with orange underline on hover
+.orangeUnderlineHover {
+  text-decoration: none;
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+
+  // Styles for the underline
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.1px;
+    width: 0;
+    height: 1px;
+    // Use the $basicOrange variable from the imported variables
+    background-color: $basicOrange;
+    transition:
+      width 0.2s ease-in-out,
+      left 0.2s ease-in-out;
+  }
+
+  // Styles for the underline on hover
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+// Duplicate styles; consider removing or adjusting
+.whiteUnderlineHover {
+  text-decoration: none;
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+
+  // Styles for the underline
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.1px;
+    width: 0;
+    height: 1px;
+    // Use the 'white' color directly
+    background-color: white;
+    transition:
+      width 0.2s ease-in-out,
+      left 0.2s ease-in-out;
+  }
+
+  // Styles for the underline on hover
+  &:hover::after {
+    width: 100%;
+  }
+}

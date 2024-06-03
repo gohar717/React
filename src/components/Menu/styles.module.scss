@@ -1,0 +1,125 @@
+// Import variable styles
+@import "../../assets/styles/variables.scss";
+
+// Styling for the navigation container
+.container {
+  height: 60px;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  width: 99.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  z-index: 4;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 92%; // Adjusted to 92% for better centering
+
+    // Styles for the logo and wallet balance
+    > :nth-child(1) {
+      display: flex;
+      align-items: center;
+
+      > img {
+        cursor: pointer;
+        width: 30%;
+      }
+
+      > .wallet_balance {
+        color: $basicWhite;
+        margin-left: 15px;
+      }
+    }
+
+    // Styles for the menu items
+    > :nth-child(2) {
+      display: flex;
+      column-gap: 25px;
+      align-items: center;
+
+      > :nth-child(1) {
+        display: flex;
+        align-items: center;
+        column-gap: 25px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+// Styling for the vertical line separator
+.line {
+  width: 1px;
+  height: 20px;
+  border: 1px solid $basicOrange;
+}
+
+// Styling for the user profile icon
+.user_profile {
+  position: relative;
+  background: white;
+  border-radius: 50%;
+
+  > img {
+    width: 35px;
+    cursor: pointer;
+  }
+}
+
+// Styling for the menu icon
+.menu_icon {
+  position: relative;
+
+  > img {
+    width: 25px;
+    cursor: pointer;
+  }
+}
+
+// Media query for small screens
+@media (max-width: $small-screen) {
+  .container {
+    > div {
+      > :nth-child(1) {
+        > .wallet_balance {
+          font-size: 12px;
+        }
+      }
+
+      > :nth-child(2) {
+        column-gap: 15px;
+      }
+    }
+  }
+}
+
+// Media query for mobile screens
+@media (max-width: $mobile-screen) {
+  .container {
+    > div {
+      > :nth-child(1) {
+
+        > .wallet_balance {
+          font-size: 2.5vw;
+        }
+      }
+
+      > :nth-child(2) {
+        column-gap: 15px;
+      }
+    }
+  }
+
+  // Resetting position for small screens
+  .menu_icon {
+    position: unset;
+  }
+
+  .user_profile {
+    position: unset;
+  }
+}

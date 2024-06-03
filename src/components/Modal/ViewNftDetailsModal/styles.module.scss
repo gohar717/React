@@ -1,0 +1,81 @@
+// Importing variable styles from a file
+@import "../../../assets/styles/variables.scss";
+
+// Styling for the modal container
+.container {
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Styling for the inner div within the modal container
+  > div {
+    min-width: 370px;
+    max-width: 600px;
+    background: $basicDarkBlue; // Using the background color variable
+    border-radius: 20px;
+
+    // Styling for the modal header
+    > .modalHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $basicWhite; // Using the text color variable
+      padding: 25px;
+      column-gap: 25px;
+      border-bottom: 1px solid $basicWhite; // Using the border color variable
+
+      // Styling for the close button
+      > .close {
+        width: 20px;
+        cursor: pointer;
+      }
+    }
+
+    // Styling for the modal body
+    > .modalBody {
+      color: $basicWhite; // Using the text color variable
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+
+    // Styling for the modal footer
+    > .modalFooter {
+      display: flex;
+      justify-content: flex-end;
+      column-gap: 10px;
+      padding: 15px 25px;
+      border-top: 1px solid $basicWhite; // Using the border color variable
+    }
+  }
+}
+
+// Media query for small screens
+@media (max-width: $small-screen) {
+  .modalHeader {
+    > h3 {
+      text-align: left;
+      font-size: 20px;
+    }
+  }
+}
+
+// Media query for mobile screens
+@media (max-width: $mobile-screen) {
+  .container {
+    > div {
+      min-width: 0;
+      width: 100%;
+      margin: 20px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+// Importing variables from a separate SCSS file
+@import "../../assets/styles/variables.scss";
+
+// Styling for the container class
+.container {
+  width: 100%;
+  height: 100%;
+  color: $basicWhite; // Using the basicWhite variable for text color
+  display: flex;
+  flex-direction: column;
+  gap: 20px; // Setting the gap between child elements
+
+  > p {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  // Styling for the see more wrapper
+  .see_more_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+}
+
+// Styling for the nfts_block class
+.nfts_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px 35px; // Setting the gap between items both horizontally and vertically
+  padding: 20px;
+}
+
+// Styling for the loader class
+.loader {
+  padding: 70px 0;
+}
+
+// Media query for small screens
+@media (max-width: $small-screen) {
+  .container {
+    > p {
+      font-size: 20px; // Adjusting font size for smaller screens
+    }
+  }
+}

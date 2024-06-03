@@ -1,0 +1,73 @@
+// Import variables
+@import "../../assets/styles/variables.scss";
+
+// Base styles for the button class
+.button {
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 10px;
+  outline: none;
+  font-size: 18px; // Duplicate font-size declaration, consider removing one
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Styles for a title with opacity
+  .title_opacity {
+    position: absolute;
+    opacity: 0.3;
+  }
+}
+
+// Color variations for the button
+.btn_white {
+  border: 1px solid $basicDarkBlue;
+  color: $basicDarkBlue;
+  background: $basicWhite;
+
+  // Hover and focus styles
+  &:hover,
+  &:focus {
+    border: 1px solid $basicWhite;
+    background-color: $basicLightBlue;
+    color: $basicWhite;
+  }
+
+  // Active state styles
+  &:active {
+    background-color: $basicLightBlue;
+    color: $basicWhite;
+  }
+}
+
+.btn_blue {
+  border: 1px solid $basicWhite;
+  color: $basicWhite;
+  background: $basicDarkBlue;
+
+  // Hover and focus styles
+  &:hover,
+  &:focus {
+    background-color: lighten($basicDarkBlue, 10%);
+    outline: none;
+    color: $basicDarkBlue;
+  }
+
+  // Active state styles
+  &:active {
+    background-color: darken($basicDarkBlue, 10%);
+    color: $basicDarkBlue;
+  }
+}
+
+// Size variations for the button
+.btn_medium {
+  width: 80px;
+}
+
+.btn_fit {
+  width: fit-content;
+}

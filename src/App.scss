@@ -1,0 +1,104 @@
+// Importing Bootstrap and custom variables
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./assets/styles/variables.scss";
+
+// Defining custom fonts using @font-face
+@font-face {
+  font-family: "bellafair";
+  src: url("./assets/fonts/Bellafair/Bellefair-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+  font-display: swap;
+}
+
+// Global styles for the entire body
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+// Resetting margins and paddings for common elements
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  transition: all 0.2s ease-in-out;
+  margin: 0;
+  padding: 0;
+}
+
+// Styling heading fonts
+h1,
+h2,
+h3 {
+  font-family: bellafair;
+}
+
+// Styling text fonts
+p,
+span,
+h4,
+h5,
+a,
+li {
+  font-family: montserrat;
+  transition: all 0.2s ease-in-out;
+}
+
+// Styling for buttons with a smooth transition
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+// Main application container styles
+.App {
+  position: relative;
+  background-image: url("./assets/images/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+// Styling for custom scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(5, 197, 231);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(63, 94, 230);
+}
+
+// Styling for input type number
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

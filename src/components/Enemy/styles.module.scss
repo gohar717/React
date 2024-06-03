@@ -1,0 +1,91 @@
+// Import variables
+@import "../../assets/styles/variables.scss";
+
+// Styles for the enemy class
+.enemy {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: $basicDarkBlue; // Background color using a variable
+  padding: 20px;
+  grid-gap: inherit;
+  border-radius: 30px;
+
+  // Right part of the enemy
+  &_rightPart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    // Styling for h4 inside right part
+    > h4 {
+      font-weight: 600;
+    }
+
+    // Styling for paragraphs inside right part
+    > p {
+      font-size: 18px;
+      padding: 20px 0;
+    }
+  }
+
+  // Left part of the enemy
+  &_leftPart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Styling for images inside left part
+    > img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+}
+
+// Styles for the info_value class
+.info_value {
+  font-size: 22px;
+
+  // Styling for the first child inside info_value
+  > :nth-child(1) {
+    font-weight: 600;
+  }
+}
+
+// Media query for screens with a maximum width of $medium-screen
+@media (max-width: $medium-screen) {
+  .enemy {
+    // Adjusted gap for the right part
+    &_rightPart {
+      gap: 7px;
+    }
+  }
+  // Adjusted font size for info_value
+  .info_value {
+    font-size: 18px;
+  }
+}
+
+// Media query for screens with a maximum width of $small-screen
+@media (max-width: $small-screen) {
+  .enemy {
+    // Display as a flex column with adjusted row gap
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+
+// Media query for screens with a maximum width of $mobile-screen
+@media (max-width: $mobile-screen) {
+  .enemy {
+    // Adjusted styling for the left part in mobile screens
+    &_leftPart {
+      display: flex;
+    }
+  }
+}

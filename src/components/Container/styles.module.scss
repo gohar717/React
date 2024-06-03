@@ -1,0 +1,22 @@
+// Import variables
+@import "../../assets/styles/variables.scss";
+
+// Styles for the container class
+.container {
+  background-color: rgba(17, 23, 31, 0.8); // Background color with alpha transparency
+  display: flex;
+  justify-content: center;
+  min-height: 100vh; // Minimum height of the container to cover the entire viewport height
+
+  // Styles for direct child div of the container
+  > div {
+    margin: 80px 50px; // Margin for the child div
+  }
+
+  // Media query for screens with a maximum width of $mobile-screen
+  @media (max-width: $mobile-screen) {
+    > div {
+      margin: 15px; // Adjusted margin for smaller screens
+    }
+  }
+}

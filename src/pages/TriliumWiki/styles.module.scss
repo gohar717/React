@@ -1,0 +1,96 @@
+// Importing variables from separate SCSS files
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/global.scss";
+
+// Styling for the Trilium Wiki component
+.triliumWiki {
+    display: flex;
+    flex-direction: column;
+
+    // Styling for the Welcome Section
+    .welcomeTitle {
+        color: $basicWhite; // Setting text color using the basicWhite variable
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .welcomeText {
+        color: $basicOrange; // Setting text color using the basicOrange variable
+        font-size: 1.2em;
+        line-height: 1.5;
+
+        // Styling for links within the welcome text
+        > a {
+            text-decoration: none;
+            color: $basicWhite; // Setting link color using the basicWhite variable
+            cursor: pointer;
+            @extend .whiteUnderlineHover; // Extending a global style for white underline on hover
+        }
+    }
+
+    // Styling for the Section Title
+    .sectionTitle {
+        color: $lightOrange; // Setting text color using the lightOrange variable
+        font-size: 1.8em;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    // Styling for the Subsection Title
+    .subSectionTitle {
+        color: $basicOrange; // Setting text color using the basicOrange variable
+        font-size: 1.5em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    // Styling for the Section Text
+    .sectionText {
+        color: $basicWhite; // Setting text color using the basicWhite variable
+        font-size: 1.5em;
+        line-height: 1.5;
+
+        // Styling for links within the section text
+        > a {
+            text-decoration: none;
+            color: $basicOrange; // Setting link color using the basicOrange variable
+            cursor: pointer;
+            @extend .orangeUnderlineHover; // Extending a global style for orange underline on hover
+        }
+    }
+
+    // Styling for the Section Image or Gif
+    .sectionImageWrapper {
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .sectionImage {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    // Media queries for responsive design based on screen sizes
+    @media screen and (max-width: $large-screen) {
+        max-width: $large-screen;
+    }
+
+    @media screen and (max-width: $medium-screen) {
+        max-width: $medium-screen;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        max-width: $small-screen;
+    }
+
+    @media screen and (max-width: $mobile-screen) {
+        max-width: $mobile-screen;
+
+        // Adjusting font size for section text on smaller screens
+        .sectionText {
+            font-size: 1.25em;
+        }
+    }
+}

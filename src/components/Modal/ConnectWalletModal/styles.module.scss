@@ -1,0 +1,101 @@
+// Importing global styles
+@import "../../../assets/styles/variables.scss";
+
+// Styles for the modal container
+.container {
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Styles for the content div inside the modal container
+  > div {
+    min-width: 370px;
+    background: $basicDarkBlue; // Using the $basicDarkBlue variable for background color
+    border-radius: 20px;
+
+    // Styles for the modal header
+    > .modalHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $basicWhite; // Using the $basicWhite variable for text color
+      padding: 25px;
+      column-gap: 25px;
+      border-bottom: 1px solid $basicWhite; // Using the $basicWhite variable for border color
+
+      // Styles for the close button
+      > .close {
+        width: 20px;
+        cursor: pointer;
+      }
+    }
+
+    // Styles for the modal body
+    > .modalBody {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+
+      // Styles for each option in the modal body
+      > div {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        background: $basicWhite; // Using the $basicWhite variable for background color
+        border-radius: 10px;
+        padding: 10px;
+        cursor: pointer;
+
+        // Hover effect for the options
+        &:hover {
+          background-color: #c5c5c5;
+        }
+
+        // Styles for the icon inside each option
+        > img {
+          width: 30px;
+        }
+      }
+    }
+
+    // Styles for the modal footer
+    > .modalFooter {
+      display: flex;
+      justify-content: flex-end;
+      padding: 15px 25px;
+      border-top: 1px solid $basicWhite; // Using the $basicWhite variable for border color
+    }
+  }
+}
+
+// Media query for small screens
+@media (max-width: $small-screen) {
+  // Styles for the modal header within the small screen
+  .modalHeader {
+    > h3 {
+      text-align: left;
+      font-size: 20px;
+    }
+  }
+}
+
+// Media query for mobile screens
+@media (max-width: $mobile-screen) {
+  // Styles for the modal container within the mobile screen
+  .container {
+    > div {
+      min-width: 0;
+      width: 100%;
+      margin: 20px;
+    }
+  }
+}
